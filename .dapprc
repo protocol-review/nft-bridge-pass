@@ -1,0 +1,6 @@
+if [ "$CI" = "true" ]
+then 
+  export FOUNDRY_FUZZ_RUNS=10000 # Fuzz for a long time if CI is set to true.
+else
+  export FOUNDRY_FUZZ_RUNS=1000 # Only fuzz briefly if CI is not set to true.
+fi
